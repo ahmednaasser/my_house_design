@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
+//import 'package:my_house_design/core/services/shared_preferences_singleton.dart';
 import 'package:my_house_design/core/utils/app_images.dart';
+//import 'package:my_house_design/core/utils/constants.dart';
+//import 'package:my_house_design/features/auth/presentation/views/login_view.dart';
 
 import '../../../../on_boarding/presentation/views/on_boarding_view.dart';
 
@@ -12,12 +15,10 @@ class SplashViewBody extends StatefulWidget {
 }
 
 class _SplashViewBodyState extends State<SplashViewBody> {
-@override
+  @override
   void initState() {
-    
+    super.initState();
     executeNavigation();
-    
-        super.initState();
   }
 
   @override
@@ -26,16 +27,23 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Expanded(
-          child: Center(child: SvgPicture.asset(Assets.imagesLogo)),
+          child: Center(
+            child: SvgPicture.asset(
+              Assets.imagesLogo2,
+              fit: BoxFit.contain,
+            ),
+          ),
         ),
       ],
     );
   }
-  
-  void executeNavigation() {
-    Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, OnBoardingView.routeName);
-    });
 
+  void executeNavigation() {
+    // bool isOnBoardingViewSeen = Prefs.getBool(kisOnBoardingViewSeen);
+    Future.delayed(const Duration(seconds: 3), () {
+      if (mounted) {
+        Navigator.pushReplacementNamed(context, OnBoardingView.routeName);
+      }
+    });
   }
 }

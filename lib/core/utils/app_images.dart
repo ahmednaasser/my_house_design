@@ -2,12 +2,24 @@
 class Assets {
   Assets._();
   
-  /// Assets for imagesChairIntro
-  /// assets/images/chairIntro.svg
-  static const String imagesChairIntro = "assets/images/chairIntro.svg";
-
   /// Assets for imagesLogo
   /// assets/images/logo.svg
   static const String imagesLogo = "assets/images/logo.svg";
+
+  /// Assets for imagesLogo2
+  /// assets/images/logo2.svg
+  static const String imagesLogo2 = "assets/images/logo2.svg";
+
+  /// Assets for imagesPageViewItem1Image
+  /// assets/images/page_view_item1_image.png
+  static const String imagesPageViewItem1Image = "assets/images/page_view_item1_image.png";
+
+  /// Assets for imagesPageViewItem2Image
+  /// assets/images/page_view_item2_image.png
+  static const String imagesPageViewItem2Image = "assets/images/page_view_item2_image.png";
+
+  /// Assets for imagesPageViewItem3Image
+  /// assets/images/page_view_item3_image.png
+  static const String imagesPageViewItem3Image = "assets/images/page_view_item3_image.png";
 }
 
